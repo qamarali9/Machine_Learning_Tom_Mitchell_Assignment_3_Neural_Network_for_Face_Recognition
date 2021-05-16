@@ -1,0 +1,24 @@
+4. 
+In 'imagenet.c' used  @@@if (!strcmp(eyes,"sunglasses"))@@@ instead of @@@if (!strcmp(eyes,"glickman"))@@@
+           Max-Accuracy   epochs to get there
+Train      100            36 
+Test       100            30
+Validation  98            29
+
+7.
+In 'imagenet.c' encoded each ouput to be length 20(+1) vector, with only one of the values as HIGH(=0.905) and rest LOW(=0.005); each userid is mapped to a number between 1-20 corresonding to the order in which it is mentioned in the assignemnt and that element/co-ordinate of the output vector will be set to HIGH
+           Max-Accuracy   epochs to get there
+Train      100            19 
+Test       100            52
+Validation 97.5           15
+
+11.
+In 'imagenet.c' encoded each ouput to be length 4(+1) vector, with only one of the values as HIGH(=0.925) and rest LOW(=0.025); each pse is mapped to a number between 1-4 corresonding to the order in which it is mentioned in the assignemnt and that element/co-ordinate of the output vector will be set to HIGH
+           Max-Accuracy   epochs to get there
+Train      99.6390        62 
+Test       94.2446        80
+Validation 96.6346        81
+
+13.
+Yes, the hidden units seem to weight particular regions of the image greater than others e.g, hidden unit 4 weighs face(forehead and chin) facing right more than other regions.
+Yes, particular hidden units seem to be tuned to different features of some sort e.g, hidden unit 5 seems to be tuned to detect face facing straight while hidden unit 4 weighs seems to be tuned to detect face facing right.
